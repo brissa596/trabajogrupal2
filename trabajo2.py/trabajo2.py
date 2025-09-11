@@ -1,32 +1,46 @@
 #ej5
-numero=[2,3,4,5,6]
-valor=int(input("ingrese un valor para multiplicar cada elemento  de la lista:"))
-resultado= [elemento  * valor for elemento in numero ]
+numero = [2, 3, 4, 5, 6]
+valor = int(input("ingrese un valor para multiplicar cada elemento de la lista: "))
 
-print("lista:",[numero])
-print("lista multiplicada", [resultado])
+resultado = []  
+
+for elemento in numero:       
+    multiplicado = elemento * valor
+    resultado.append(multiplicado)  
+
+print("lista:", numero)
+print("lista multiplicada:", resultado)
 
 
 #ej6
+ingreso = input("ingrese una lista de numeros: ")
+lista = [int(num) for num in ingreso.split()]
 
-ingreso=(input("ingrese una lista de numeros: "))
-lista=[int(num) for num in ingreso.split()]
+lista2 = []  
 
-lista2= (list(set(lista)))
+for num in lista:                
+    if num not in lista2:        
+        lista2.append(num)       
 
-print("lista original", lista)
+print("lista original:", lista)
 print("lista sin duplicados:", lista2)
 
 
 #ej7
+ingreso = input("ingrese una lista de numeros para sacar el promedio: ")
+lista = [int(num) for num in ingreso.split()]
 
-ingreso=(input("ingrese una lista de numeros para sacar el promedio :"))
+suma = 0
+contador = 0
 
-lista=[int(num) for num in ingreso.split()]
+for num in lista:      
+    suma += num        
+    contador += 1      
 
-promedio= sum(lista) / len(lista)
+promedio = suma / contador
 
-print("el promedio de los elementos es :", promedio)
+print("el promedio de los elementos es:", promedio)
+
 
 
 #ej8
